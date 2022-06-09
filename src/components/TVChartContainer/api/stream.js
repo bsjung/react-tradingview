@@ -1,14 +1,14 @@
 // api/stream.js
 import historyProvider from './historyProvider.js'
 // we use Socket.io client to connect to cryptocompare's socket.io stream
-import socketio from "socket.io-client"
+import io from "socket.io-client"
 let socket_url = 'wss://streamer.cryptocompare.com'
-let socket_option = {
+let socket_options = {
   'reconnection': true,
   'reconnectionDelay': 500,
   'reconnectionAttempts': 10
 }
-let socket = socketio.connect(socket_url, socket_option)
+let socket = io.connect(socket_url, socket_options)
 // keep track of subscriptions
 let _subs = []
 
