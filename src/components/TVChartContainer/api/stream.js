@@ -1,14 +1,14 @@
 // api/stream.js
 import historyProvider from './historyProvider.js'
 // we use Socket.io client to connect to cryptocompare's socket.io stream
-import {io} from "socket.io-client";
+import socketio from "socket.io-client"
 let socket_url = 'wss://streamer.cryptocompare.com'
 let socket_option = {
   'reconnection': true,
   'reconnectionDelay': 500,
   'reconnectionAttempts': 10
 }
-let socket = io(socket_url, socket_option)
+let socket = socketio.connect(socket_url, socket_option)
 // keep track of subscriptions
 let _subs = []
 
@@ -25,7 +25,7 @@ export default {
    lastBar: historyProvider.history[symbolInfo.name].lastBar,
    listener: updateCb,
   }
-_subs.push(newSub)
+  _subs.push(newSub)
  },
  unsubscribeBars: function(uid) {
   var subIndex = _subs.findIndex(e => e.uid === uid)
@@ -40,13 +40,13 @@ _subs.push(newSub)
 }
 
 socket.on('connect', () => {
- console.log('===Socket connected')
+ console.log('[DEBUG] Socket connected')
 })
 socket.on('disconnect', (e) => {
- console.log('===Socket disconnected:', e)
+ console.log('[DEBUG] Socket disconnected:', e)
 })
 socket.on('error', err => {
- console.log('====socket error', err)
+ console.log('[DEBUG] Socket error', err)
 })
 socket.on('m', (e) => {
  // here we get all events the CryptoCompare connection has subscribed to
