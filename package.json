@@ -1,5 +1,5 @@
 {
-  "name": "charting-library-react-js-example-part1",
+  "name": "react-tradingview",
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
