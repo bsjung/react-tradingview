@@ -1,25 +1,20 @@
-# TradingView JS API Examples
+# TradingView Charting Library and React Integration Example (JavaScript)
 
-> In order to run these examples you need to download the private [TradingView Charting Library](https://github.com/tradingview/charting_library) from github, which you must [apply](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) for acces to from TradingView. These won't work without the Library!
-> If you do have access to the repo, then follow the instructions at the bottom of this Readme
+## How to start
 
-Code for a series about using the TradingView Charting Library's JS API. 
+1. Install dependencies `npm install`.
+1. Copy `charting_library` folder from https://github.com/tradingview/charting_library/ to `/public`. The earliest supported version of the Charting Library is 1.12. If you get 404 then you need to [request an access to this repository](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
+1. Copy `datafeeds` folder from https://github.com/tradingview/charting_library/ to `/public`.
+1. Run `npm start`. It will build the project and open a default browser with the Charting Library.
 
-Find the guide on Medium [here](https://medium.com/@jonchurch/tradingview-js-api-integration-tutorial-introduction-5e4809d9ef36)
+## What is Charting Library
 
-## Setup
+Charting Library is a standalone solution for displaying charts. This free, downloadable library is hosted on your servers and is connected to your data feed to be used in your website or app. [Learn more and download](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
 
-First, do you have access to the [TradingView Charting Library](https://github.com/tradingview/charting_library)? 
+## What is React
 
-If that link shows you a 404, then you do not, and you must [apply for access](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) with TradingView before proceeding.
+React is a JavaScript library for building user interfaces. It is maintained by Facebook, Instagram and a community of individual developers and corporations.
 
-If you do have access, then clone the Charting Library repository to the root of this repo, and copy the `charting_library` _folder inside the charting library project_ into the public folder of an example before running it.
+## About This Project
 
-
-```
-git clone https://github.com/tradingview/charting_library
-cp -r charting_library/charting_library ./part1/public/
-```
-Once you have added the charting library, run `npm install` from inside the step you want to run.
-
-Then run `npm start` to start the development server, and visit `localhost:3000` in your browser.
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
