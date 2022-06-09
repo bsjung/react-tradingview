@@ -1,7 +1,7 @@
 // api/stream.js
 import historyProvider from './historyProvider.js'
 // we use Socket.io client to connect to cryptocompare's socket.io stream
-var io = require('socket.io-client')
+import { io } from "socket.io-client";
 var socket_url = 'wss://streamer.cryptocompare.com'
 var socket = io(socket_url)
 // keep track of subscriptions
