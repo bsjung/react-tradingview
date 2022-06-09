@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './App.css';
-import { TVChartContainer } from './components/TVChartContainer/index';
+import { TradingView } from './components/TradingView/index';
 
 class App extends React.Component {
 	render() {
@@ -11,7 +11,7 @@ class App extends React.Component {
 						TradingView Charting Library and React Integration Example
 					</h1>
 				</header>
-				<TVChartContainer />
+				<TradingView />
 			</div>
 		);
 	}

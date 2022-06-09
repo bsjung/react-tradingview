@@ -9,7 +9,7 @@ function getLanguageFromURL() {
 	return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
-export class TVChartContainer extends React.PureComponent {
+export class TradingView extends React.PureComponent {
 
 	static defaultProps = {
 		symbol: 'Coinbase:BTC/USD',
@@ -68,7 +68,7 @@ export class TVChartContainer extends React.PureComponent {
 		return (
 			<div
 				id={ this.props.containerId }
-				className={ 'TVChartContainer' }
+				className={ 'TradingView' }
 			/>
 		);
 	}
